@@ -4,7 +4,8 @@ const content=document.querySelector('.content');
 const greetings=[
     'Im fine you lovely child',
     'everything goes fine',
-    'leave me alone'
+    'leave me alone',
+    'dont have time to talk with you'
 ]
 const weather=[
     'there is a nice weather',
@@ -35,7 +36,7 @@ recognition.start();
 
 function readOutLoud(message) {
     const speech = new SpeechSynthesisUtterance();
-    speech.text='samaj nahi aa raha mere';
+    speech.text='Dont understand your language';
     if(message.includes('how are you')||message.includes('hello')){
    const finalMessage=  greetings[Math.floor(Math.random()*greetings.length)];
    speech.text=finalMessage;
